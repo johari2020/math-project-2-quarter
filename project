@@ -80,7 +80,7 @@ while i <= b+0.5:
 #all of the neccesary y values for f double prime--fx=f(x), fxa=f(x+.01(above)), fxb=f(x-.01(below))
 i=a
 while i<=b: 
-    '''
+    
     x=i
     fx=eval(f)
     x=i+.01
@@ -92,18 +92,34 @@ while i<=b:
     x=i
     dprime= (fprimea-fprime)/0.01
     
-    if dprime
     if dprime>=0:
         x=i
         u.append(x)
     if dprime<0:
         x=i
         d.append(x)
-    '''
+    
     i +=.05
+    ll=[a]
     if dprime>-.05 and dprime<.05: 
+        ll.append(x) 
         print("point of inflection= {0}".format(round(x, 4)))
-        
+    ll.append(b) 
+print(ll)
+for p in ll: 
+    x=p
+    fx=eval(f)
+    x=i+.01
+    fxa=eval(f) 
+    x=i-.01
+    fxb=eval(f) 
+    fprimea= (fxa-fx)/.01
+    fprime= (fx-fxb)/.01
+    x=i
+    dprime= (fprimea-fprime)/0.01
+    
+    if dprime>0
+    
 if len(u)>0:
     uu = (u[0:len(u):len(u)-1])
     print("Concave up: ")
