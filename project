@@ -10,6 +10,7 @@ max = 0
 min = 0
 u=[]
 d=[]
+ll=[a]
 while i <= b+0.5: 
     # f prime (slope)
     x = i
@@ -100,22 +101,37 @@ while i<=b:
         d.append(x)
     
     i +=.05
-    ll=[a]
+    
     if dprime>-.05 and dprime<.05: 
-        ll.append(x) 
         print("point of inflection= {0}".format(round(x, 4)))
-    ll.append(b) 
+        ll.append(x) 
+ll.append(b) 
 print(ll)
 for p in ll: 
-    x=p
+    x=float(p)
     fx=eval(f)
-    x=i+.01
+    x=p+.01
     fxa=eval(f) 
-    x=i-.01
+    x=p-.01
     fxb=eval(f) 
     fprimea= (fxa-fx)/.01
     fprime= (fx-fxb)/.01
-    x=i
+    x=p
+    dprime= (fprimea-fprime)/0.01
+    
+    print(p)
+    print("double prime:")
+    print(dprime)
+'''
+    x=p
+    fx=eval(f)
+    x=p+.01
+    fxa=eval(f) 
+    x=p-.01
+    fxb=eval(f) 
+    fprimea= (fxa-fx)/.01
+    fprime= (fx-fxb)/.01
+    x=p
     dprime= (fprimea-fprime)/0.01
     
     if dprime>0
@@ -129,7 +145,7 @@ elif len(d)>0:
     dd = d[::len(d)-1]
     print("Concave down: ")
     print(dd)
- 
+'''
     
 '''
 print(l)
