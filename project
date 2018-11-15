@@ -122,11 +122,9 @@ for p in ll:
         print("Concave up:") 
         u= ll.index(p)
         print(p,ll[u])
-    if dprime<0: 
-        print("Concave down:") 
-        u= ll.index(p)
-        print(p,ll[u])
-    
+    print(p)
+    print("double prime:")
+    print(dprime)
 '''
     x=p
     fx=eval(f)
