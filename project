@@ -118,7 +118,10 @@ for p in ll:
     fprime= (fx-fxb)/.01
     x=p
     dprime= (fprimea-fprime)/0.01
-    
+    if dprime>0: 
+        print("Concave up:") 
+        u= ll.index(p)
+        print(p,ll[u])
     print(p)
     print("double prime:")
     print(dprime)
