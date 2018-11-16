@@ -78,7 +78,7 @@ while i <= b+0.5:
                 min = y1
     i +=.1
     
-#all of the neccesary y values for f double prime--fx=f(x), fxa=f(x+.01(above)), fxb=f(x-.01(below))
+#concavity
 i=a
 while i<=b: 
     x=i
@@ -91,18 +91,14 @@ while i<=b:
     fprime= (fx-fxb)/.01
     x=i
     dprime= (fprimea-fprime)/0.01
-    print("x: " + str(x))
-    print("dprime: " + str(dprime))
+    
     dp=round(dprime, 3)
     if dp>=-.1 and dp<=.1: 
         print("point of inflection= {0}".format(round(x, 4)))
         ll.append(i) 
     i +=.01
 ll.append(b) 
-
 r=list(range(0,len(ll)))
- 
-
 for p in r:
     n=ll[p]
     x=float(n)
