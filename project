@@ -1,4 +1,4 @@
-from math import sin, cos, radians, log
+from math import sin, cos, tan, log, e
 
 f = input("Input your function: ")
 a = float(input("What is a of the interval [a,b]: " ))
@@ -99,14 +99,12 @@ while i<=b:
     if dprime<0:
         x=i
         d.append(x)
-    
-    i +=.05
-    
     if dprime>-.05 and dprime<.05: 
         print("point of inflection= {0}".format(round(x, 4)))
         ll.append(x) 
+    i +=.05
 ll.append(b) 
-
+print(ll)
 r=list(range(0,len(ll)))
 for p in r:
     n=ll[p]
@@ -124,10 +122,14 @@ for p in r:
         print("Concave up:") 
         u= ll.index(n)
         print("(" + str(n) + ", " + str(ll[p+1]) + ")")
-    if dprime<0 and p<(len(ll)-1): 
+    elif dprime<0 and p<(len(ll)-1): 
         print("Concave down:") 
         u= ll.index(n)
         print("(" + str(n) + ", " + str(ll[p+1]) + ")")
+    elif p==len(ll)-1: 
+        print("done")
+    else: 
+        print("sorry")
     
 '''
     x=p
