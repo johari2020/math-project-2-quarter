@@ -106,10 +106,8 @@ while i<=b:
         print("point of inflection= {0}".format(round(x, 4)))
         ll.append(x) 
 ll.append(b) 
-print(ll)
-print(len(ll))
+
 r=list(range(0,len(ll)))
-print(r)
 for p in r:
     n=ll[p]
     x=float(n)
