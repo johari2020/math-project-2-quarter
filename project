@@ -99,12 +99,13 @@ while i<=b:
     ddprime = (fprime-fprimeb)/0.01
     rdprime = round(dprime, 3)
     rddprime= round(ddprime,3)
-    if rdprime>=0 and rddprime<=0: 
+    if rdprime>0 and rddprime<0: 
         print("point of inflection= {0}".format(round(x, 4)))
         ll.append(round(i, 1)) 
-    if rdprime<=0 and rddprime>=0: 
+    if rdprime<0 and rddprime>0: 
         print("point of inflection= {0}".format(round(x, 4)))
         ll.append(round(i, 1)) 
+    if rdprime==0
     i +=.01
 ll.append(b) 
 print(ll)
