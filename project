@@ -100,10 +100,10 @@ while i<=b:
     
     if dprime>=0 and ddprime<=0: 
         print("point of inflection= {0}".format(round(x, 4)))
-        ll.append(round(i, 1)) 
-    if rdprime<=0 and rddprime>=0: 
+        ll.dprime(round(i, 1)) 
+    if dprime<=0 and ddprime>=0: 
         print("point of inflection= {0}".format(round(x, 4)))
-        ll.append(round(i, 1)) 
+        ll.append(i)
     i +=.01
 ll.append(b) 
 print(ll)
@@ -121,7 +121,7 @@ for p in r:
     fprime= (fx-fxb)/.01
     x=n
     dprime= (fprimea-fprime)/0.01
-    rdprime = round(dprime, 2)
+    rdprime = round(dprime, 7)
     if rdprime>0 and p<(len(ll)-1): 
         print("Concave up:") 
         u= ll.index(n)
