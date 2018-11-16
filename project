@@ -126,6 +126,10 @@ for p in r:
         print("Concave up:") 
         u= ll.index(n)
         print("(" + str(n) + ", " + str(ll[p+1]) + ")")
+    if dprime<0 and p<(len(ll)-1): 
+        print("Concave down:") 
+        u= ll.index(n)
+        print("(" + str(n) + ", " + str(ll[p+1]) + ")")
     
 '''
     x=p
