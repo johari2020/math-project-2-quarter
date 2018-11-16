@@ -97,8 +97,8 @@ while i<=b:
     x=i
     dprime= (fprimea-fprime)/0.01
     ddprime = (fprime-fprimeb)/0.01
-    rdprime = round(dprime, 2)
-    rddprime= round(ddprime,2)
+    rdprime = round(dprime, 3)
+    rddprime= round(ddprime,3)
     if rdprime>=0 and rddprime<=0: 
         print("point of inflection= {0}".format(round(x, 4)))
         ll.append(round(i, 1)) 
