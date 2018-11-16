@@ -100,7 +100,7 @@ while i<=b:
     
     if dprime>=0 and ddprime<=0: 
         print("point of inflection= {0}".format(round(x, 4)))
-        ll.dprime(round(i, 1)) 
+        ll.append(i)
     if dprime<=0 and ddprime>=0: 
         print("point of inflection= {0}".format(round(x, 4)))
         ll.append(i)
