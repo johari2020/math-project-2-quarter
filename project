@@ -107,24 +107,26 @@ while i<=b:
         ll.append(x) 
 ll.append(b) 
 print(ll)
-for p in ll: 
-    x=float(p)
+print(len(ll))
+r=list(range(0,len(ll)))
+print(r)
+for p in r:
+    n=ll[p]
+    x=float(n)
     fx=eval(f)
-    x=p+.01
+    x=n+.01
     fxa=eval(f) 
-    x=p-.01
+    x=n-.01
     fxb=eval(f) 
     fprimea= (fxa-fx)/.01
     fprime= (fx-fxb)/.01
-    x=p
+    x=n
     dprime= (fprimea-fprime)/0.01
-    if dprime>0: 
+    if dprime>0 and p<(len(ll)-1): 
         print("Concave up:") 
-        u= ll.index(p)
-        print(p,ll[u])
-    print(p)
-    print("double prime:")
-    print(dprime)
+        u= ll.index(n)
+        print("(" + str(n) + ", " + str(ll[p+1]) + ")")
+    
 '''
     x=p
     fx=eval(f)
