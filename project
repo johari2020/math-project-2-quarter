@@ -97,12 +97,12 @@ while i<=b:
     if dp>=-.1 and dp<=.1: 
         print("point of inflection= {0}".format(round(x, 4)))
         ll.append(i) 
-    i +=.05
+    i +=.01
 ll.append(b) 
-print(ll)
+
 r=list(range(0,len(ll)))
-print(r) 
-'''
+ 
+
 for p in r:
     n=ll[p]
     x=float(n)
@@ -127,7 +127,7 @@ for p in r:
         print("done")
     else: 
         print("sorry")
-'''
+
 '''
     x=p
     fx=eval(f)
