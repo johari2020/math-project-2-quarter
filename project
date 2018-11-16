@@ -84,20 +84,32 @@ while i<=b:
     x=i
     fx=eval(f)
     x=i+.01
-    fxa=eval(f) 
+    fxa=eval(f)
+    x=i+.02
+    fxaa=eval(f)
     x=i-.01
     fxb=eval(f) 
+    x=i-.02
+    fxbb=eval(f)
     fprimea= (fxa-fx)/.01
     fprime= (fx-fxb)/.01
+    fprimeb=(fxb-fxbb)/0.01
     x=i
     dprime= (fprimea-fprime)/0.01
-    rdprime = round(dprime, 1)
-    if rdprime>=-.025 and dprime<=.025: 
+    ddprime = (fprime-fprimeb)/0.01
+    rdprime = round(dprime, 2)
+    rddprime= round(ddprime,2)
+    if rdprime>=0 and rddprime<=0: 
+        print("point of inflection= {0}".format(round(x, 4)))
+        ll.append(round(i, 1)) 
+    if rdprime<=0 and rddprime>=0: 
         print("point of inflection= {0}".format(round(x, 4)))
         ll.append(round(i, 1)) 
     i +=.01
 ll.append(b) 
+print(ll)
 r=list(range(0,len(ll)))
+
 for p in r:
     n=ll[p]
     x=float(n)
@@ -123,40 +135,3 @@ for p in r:
         print("done")
     else: 
         print("sorry")
-
-'''
-    x=p
-    fx=eval(f)
-    x=p+.01
-    fxa=eval(f) 
-    x=p-.01
-    fxb=eval(f) 
-    fprimea= (fxa-fx)/.01
-    fprime= (fx-fxb)/.01
-    x=p
-    dprime= (fprimea-fprime)/0.01
-    
-    if dprime>0
-    
-if len(u)>0:
-    uu = (u[0:len(u):len(u)-1])
-    print("Concave up: ")
-    print(uu)
-
-elif len(d)>0:
-    dd = d[::len(d)-1]
-    print("Concave down: ")
-    print(dd)
-'''
-    
-'''
-print(l)
-print(c)
-print(i)
-max = format(round(max,4))
-maxx = format(round(maxx,4))
-min = format(round(min,4))
-minx = format(round(minx,4))
-print("Absolute Maximum: (" + str(maxx) + "," + str(max) + ")")
-print("Absolute Minimum: (" + str(minx) + "," + str(min) + ")")
-'''
