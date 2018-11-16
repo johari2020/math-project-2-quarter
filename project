@@ -122,12 +122,11 @@ for p in r:
     fprime= (fx-fxb)/.01
     x=n
     dprime= (fprimea-fprime)/0.01
-    rdprime = round(dprime, 2)
-    if rdprime>0 and p<(len(ll)-1): 
+    if dprime>0 and p<(len(ll)-1): 
         print("Concave up:") 
         u= ll.index(n)
         print("(" + str(n) + ", " + str(ll[p+1]) + ")")
-    elif rdprime<0 and p<(len(ll)-1): 
+    elif dprime<0 and p<(len(ll)-1): 
         print("Concave down:") 
         u= ll.index(n)
         print("(" + str(n) + ", " + str(ll[p+1]) + ")")
