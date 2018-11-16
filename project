@@ -1,4 +1,4 @@
-from math import sin, cos, radians
+from math import sin, cos, radians, log
 
 f = input("Input your function: ")
 a = float(input("What is a of the interval [a,b]: " ))
@@ -76,7 +76,7 @@ while i <= b+0.5:
             if y1 < min:
                 minx = x
                 min = y1
-    i +=.05
+    i +=.1
     
 #all of the neccesary y values for f double prime--fx=f(x), fxa=f(x+.01(above)), fxb=f(x-.01(below))
 i=a
