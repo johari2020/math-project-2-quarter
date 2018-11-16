@@ -81,7 +81,6 @@ while i <= b+0.5:
 #all of the neccesary y values for f double prime--fx=f(x), fxa=f(x+.01(above)), fxb=f(x-.01(below))
 i=a
 while i<=b: 
-    
     x=i
     fx=eval(f)
     x=i+.01
@@ -92,20 +91,18 @@ while i<=b:
     fprime= (fx-fxb)/.01
     x=i
     dprime= (fprimea-fprime)/0.01
-    
-    if dprime>=0:
-        x=i
-        u.append(x)
-    if dprime<0:
-        x=i
-        d.append(x)
-    if dprime>-.05 and dprime<.05: 
+    print("x: " + str(x))
+    print("dprime: " + str(dprime))
+    dp=round(dprime, 3)
+    if dp>=-.1 and dp<=.1: 
         print("point of inflection= {0}".format(round(x, 4)))
-        ll.append(x) 
+        ll.append(i) 
     i +=.05
 ll.append(b) 
 print(ll)
 r=list(range(0,len(ll)))
+print(r) 
+'''
 for p in r:
     n=ll[p]
     x=float(n)
@@ -130,7 +127,7 @@ for p in r:
         print("done")
     else: 
         print("sorry")
-    
+'''
 '''
     x=p
     fx=eval(f)
