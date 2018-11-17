@@ -85,12 +85,10 @@ while i <= b+0.5:
                 minx = x
                 min = y1
     i +=.1
-print(lmin)
-print(lmax)
 minn=(min(lmin))
 maxx=(max(lmax))
-print("Absolute minimum: " + minn )
-print("Absolute maximum: " + maxx )
+print("Absolute minimum: " + minn)
+print("Absolute maximum: " + maxx)
 #concavity
 i=a
 while i<=b: 
