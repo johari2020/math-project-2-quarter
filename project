@@ -106,7 +106,7 @@ while i<=b:
         ll.append(i)
     i +=.01
 ll.append(b) 
-print(ll)
+
 r=list(range(0,len(ll)))
 
 for p in r:
@@ -121,16 +121,11 @@ for p in r:
     fprime= (fx-fxb)/.01
     x=n
     dprime= (fprimea-fprime)/0.01
-    rdprime = round(dprime, 7)
-    if rdprime>0 and p<(len(ll)-1): 
+    if dprime>0 and p<(len(ll)-1): 
         print("Concave up:") 
         u= ll.index(n)
         print("(" + str(round(n,4)) + ", " + str(round(ll[p+1],4)) + ")")
-    elif rdprime<0 and p<(len(ll)-1): 
+    elif dprime<0 and p<(len(ll)-1): 
         print("Concave down:") 
         u= ll.index(n)
         print("(" + str(round(n,4)) + ", " + str(round(ll[p+1],4)) + ")")
-    elif p==len(ll)-1: 
-        print("done")
-    else: 
-        print("sorry")
