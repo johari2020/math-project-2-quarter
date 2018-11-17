@@ -13,6 +13,7 @@ d=[]
 ll=[a]
 lmax=[]
 lmin=[]
+llmin=[]
 while i <= b+0.5: 
     # f prime (slope)
     x = i
@@ -94,7 +95,7 @@ for y in lmin:
         print("Absolute minimum: ", y)
     elif y==lmin[0]: 
         am=y
-    else: 
+    elif round(y,3) != b: 
         x=y
         fx=eval(f) 
         x=lmin[pos+1]
