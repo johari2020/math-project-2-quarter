@@ -11,6 +11,8 @@ min = 0
 u=[]
 d=[]
 ll=[a]
+lmax=[]
+lmin=[]
 while i <= b+0.5: 
     # f prime (slope)
     x = i
@@ -34,14 +36,17 @@ while i <= b+0.5:
             print("maximum= {0}".format(round(x, 4)))
             maxx = x
             max = y1
+            lmax.append(x)
         elif fprimea>0:
             print("minimum= {0}".format(round(x, 4)))
             minx = x
             min = y1
+            lmin.append(x)
     elif fprime <= 0.1 and fprime >= -0.1: 
         if fprimea< 0 and fprimeb> 0:
             l.append(format(round(x,4)))
             print("maximum= {0}".format(round(x, 4)))
+            lmax.append(x)
             #increasing
             length= l[len(l)-1]
             to= l[len(l)-2]
@@ -52,6 +57,7 @@ while i <= b+0.5:
         elif fprimea> 0 and fprimeb< 0:
             l.append(format(round(x,4)))
             print("minimum= {0}".format(round(x, 4)))
+            lmin.append(x)
             length= l[len(l)-1]
             to= l[len(l)-2]
             print("decreasing [" + str(to) + ", " + str(length) + "]")
@@ -62,6 +68,7 @@ while i <= b+0.5:
         l.append(format(round(x,4)))
         if fprimeb>0:
             print("maximum= {0}".format(round(x, 4)))
+            lmax.append(x)
             length= l[len(l)-1]
             to= l[len(l)-2]
             print("increasing [" + str(to) + ", " + str(length) + "]")
@@ -70,6 +77,7 @@ while i <= b+0.5:
                 max = y1
         elif fprimeb<0:
             print("minimum= {0}".format(round(x, 4)))
+            lmin.append(x)
             length= l[len(l)-1]
             to= l[len(l)-2]
             print("decreasing [" + str(to) + ", " +str(length) + "]")
@@ -77,7 +85,8 @@ while i <= b+0.5:
                 minx = x
                 min = y1
     i +=.1
-    
+print("Absolute minimum: " , str(min(lmin)))
+print("Absolute maximum: " , str(max(lmax)))
 #concavity
 i=a
 while i<=b: 
