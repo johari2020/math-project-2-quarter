@@ -85,10 +85,34 @@ while i <= b+0.5:
                 minx = x
                 min = y1
     i +=.1
-minn=(min(lmin))
-maxx=(max(lmax))
-print("Absolute minimum: " + minn)
-print("Absolute maximum: " + maxx)
+
+multabs=[]
+print(lmin)
+for y in lmin: 
+    pos=lmin.index(y)
+    if len(lmin)==0:
+        print("Absolute minimum: ", y)
+    elif y==lmin[0]: 
+        am=y
+    else: 
+        x=y
+        fx=eval(x) 
+        x=lmin[pos+1]
+        fx2=eval(x)
+        if fx<fx2:
+            am=fx
+        elif fx2<fx: 
+            am=fx2
+        elif fx==fx2: 
+            multabs.append(fx)
+            multabs.appen(fx2)
+        else:
+            print('sorry')
+print("Absolute minimum = {0}".format(round(am, 4)))
+print(lmax)
+for h in multabs: 
+    print("Absolute minimum = {0}".format(round(h, 4)))
+
 #concavity
 i=a
 while i<=b: 
@@ -140,3 +164,6 @@ for p in r:
         print("Concave down:") 
         u= ll.index(n)
         print("(" + str(round(n,4)) + ", " + str(round(ll[p+1],4)) + ")")
+
+
+
