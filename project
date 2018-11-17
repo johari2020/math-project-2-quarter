@@ -125,11 +125,11 @@ for p in r:
     if rdprime>0 and p<(len(ll)-1): 
         print("Concave up:") 
         u= ll.index(n)
-        print("(" + str(n) + ", " + str(ll[p+1]) + ")")
+        print("(" + str(round(n,4)) + ", " + str(round(ll[p+1],4)) + ")")
     elif rdprime<0 and p<(len(ll)-1): 
         print("Concave down:") 
         u= ll.index(n)
-        print("(" + str(n) + ", " + str(ll[p+1]) + ")")
+        print("(" + str(round(n,4)) + ", " + str(round(ll[p+1],4)) + ")")
     elif p==len(ll)-1: 
         print("done")
     else: 
