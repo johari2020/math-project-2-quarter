@@ -96,20 +96,28 @@ for y in lmin:
         am=y
     else: 
         x=y
-        fx=eval(x) 
+        fx=eval(f) 
         x=lmin[pos+1]
-        fx2=eval(x)
+        fx2=eval(f)
+        print(fx)
+        print(fx2)
         if fx<fx2:
             am=fx
         elif fx2<fx: 
             am=fx2
-        elif fx==fx2: 
+        elif fx<(fx2+.01) and fx>(fx2-.01): 
             multabs.append(fx)
-            multabs.appen(fx2)
+            multabs.append(fx2)
+            print("hi")
+        elif fx2<(fx+.01) and fx2>(fx-.01): 
+            multabs.append(fx)
+            multabs.append(fx2)
+            print("hello")
         else:
             print('sorry')
 print("Absolute minimum = {0}".format(round(am, 4)))
-print(lmax)
+print("lmax", lmax)
+print("multabs", multabs)
 for h in multabs: 
     print("Absolute minimum = {0}".format(round(h, 4)))
 
