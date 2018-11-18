@@ -14,6 +14,7 @@ ll=[a]
 lmax=[]
 lmin=[]
 llmin=[]
+'''
 while i <= b+0.5: 
     # f prime (slope)
     x = i
@@ -86,7 +87,37 @@ while i <= b+0.5:
                 minx = x
                 min = y1
     i +=.1
+'''
+#Critical Points(fprime=0)
+i=a
+while i<=b: 
+    x=i
+    fx=eval(f)
+    x=i+.01
+    fxa=eval(f)
+    x=i+.02
+    fxaa=eval(f)
+    x=i-.01
+    fxb=eval(f) 
+    x=i-.02
+    fxbb=eval(f)
+    fprimea= (fxa-fx)/.01
+    fprime= (fx-fxb)/.01
+    fprimeb=(fxb-fxbb)/0.01
+    x=i
+    dprime= (fprimea-fprime)/0.01
+    ddprime = (fprime-fprimeb)/0.01
+    
+    if dprime>=0 and ddprime<=0: 
+        print("point of inflection= {0}".format(round(x, 4)))
+        ll.append(i)
+    if dprime<=0 and ddprime>=0: 
+        print("point of inflection= {0}".format(round(x, 4)))
+        ll.append(i)
+    i +=.01
+ll.append(b)
 
+#Absolute Max/Min
 multabs=[]
 print(lmin)
 for y in lmin: 
@@ -121,8 +152,8 @@ print("lmax", lmax)
 print("multabs", multabs)
 for h in multabs: 
     print("Absolute minimum = {0}".format(round(h, 4)))
-
-#concavity
+    
+#Points of Inflection
 i=a
 while i<=b: 
     x=i
@@ -150,9 +181,9 @@ while i<=b:
         ll.append(i)
     i +=.01
 ll.append(b) 
-
 r=list(range(0,len(ll)))
 
+#concavity
 for p in r:
     n=ll[p]
     x=float(n)
