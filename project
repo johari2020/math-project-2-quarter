@@ -128,7 +128,7 @@ for y in lmin:
         print("Absolute minimum: ", y)
     elif y==lmin[0]: 
         am=y
-    elif round(y,3) != b: 
+    if round(y,3) != b: 
         x=y
         fx=eval(f) 
         x=lmin[pos+1]
