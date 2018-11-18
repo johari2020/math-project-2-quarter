@@ -95,24 +95,16 @@ while i<=b:
     fx=eval(f)
     x=i+.01
     fxa=eval(f)
-    x=i+.02
-    fxaa=eval(f)
     x=i-.01
     fxb=eval(f) 
-    x=i-.02
-    fxbb=eval(f)
     fprimea= (fxa-fx)/.01
     fprime= (fx-fxb)/.01
-    fprimeb=(fxb-fxbb)/0.01
-    x=i
-    dprime= (fprimea-fprime)/0.01
-    ddprime = (fprime-fprimeb)/0.01
     
-    if dprime>=0 and ddprime<=0: 
-        print("point of inflection= {0}".format(round(x, 4)))
+    if fprime>=0 and fprimea<=0: 
+        print("Critical point: {0}".format(round(x, 4)))
         ll.append(i)
-    if dprime<=0 and ddprime>=0: 
-        print("point of inflection= {0}".format(round(x, 4)))
+    if fprime<=0 and fprimea>=0: 
+        print("Critical point: {0}".format(round(x, 4)))
         ll.append(i)
     i +=.01
 ll.append(b)
