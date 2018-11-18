@@ -102,21 +102,24 @@ while i<=b:
     fprimea= (fxa-fx)/.01
     fprime= (fx-fxb)/.01
     fprimeb=(fxb-fxbb)/0.01
-    if i>=b-.01 and i>=b+.01: 
+    if i>=b-.01 and i<=b+.01: 
         if fprimeb>0: 
             endpt = ("Maximum: {0}".format(round(x, 5)))
+            lmin.append(b)
         elif fprimeb<0: 
             endpt = ("Maximum: {0}".format(round(x, 5)))
-    if fprime>0 and fprimea<0: 
+            lmax.append(b)
+    elif fprime>0 and fprimea<0: 
         print("Maximum: {0}".format(round(x, 5)))
-        ll.append(lmax)
+        lmax.append(x)
     elif fprime<0 and fprimea>0: 
         print("Minimum: {0}".format(round(x, 5)))
-        ll.append(lmin)
+        lmin.append(x)
     i +=.01
 print(endpt)
 ll.append(b)
-
+print("min", lmin) 
+print("max", lmax) 
 #Absolute Max/Min
 multabs=[]
 print(lmin)
