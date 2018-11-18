@@ -97,16 +97,24 @@ while i<=b:
     fxa=eval(f)
     x=i-.01
     fxb=eval(f) 
+    x=i-.02
+    fxbb=eval(f)
     fprimea= (fxa-fx)/.01
     fprime= (fx-fxb)/.01
-    
-    if fprime>=0 and fprimea<=0: 
-        print("Critical point: {0}".format(round(x, 4)))
-        ll.append(i)
-    if fprime<=0 and fprimea>=0: 
-        print("Critical point: {0}".format(round(x, 4)))
-        ll.append(i)
+    fprimeb=(fxb-fxbb)/0.01
+    if i>=b-.01 and i>=b+.01: 
+        if fprimeb>0: 
+            endpt = ("Maximum: {0}".format(round(x, 5)))
+        elif fprimeb<0: 
+            endpt = ("Maximum: {0}".format(round(x, 5)))
+    if fprime>0 and fprimea<0: 
+        print("Maximum: {0}".format(round(x, 5)))
+        ll.append(lmax)
+    elif fprime<0 and fprimea>0: 
+        print("Minimum: {0}".format(round(x, 5)))
+        ll.append(lmin)
     i +=.01
+print(endpt)
 ll.append(b)
 
 #Absolute Max/Min
