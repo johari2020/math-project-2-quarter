@@ -118,8 +118,7 @@ while i<=b:
     i +=.01
 print(endpt)
 ll.append(b)
-print("min", lmin) 
-print("max", lmax) 
+
 #Absolute Max/Min
 multabs=[]
 print(lmin)
@@ -134,8 +133,6 @@ for y in lmin:
         fx=eval(f) 
         x=lmin[pos+1]
         fx2=eval(f)
-        print(fx)
-        print(fx2)
         if fx<fx2:
             am=fx
         elif fx2<fx: 
