@@ -90,6 +90,7 @@ while i <= b+0.5:
 '''
 #Critical Points(fprime=0)
 i=a
+
 while i<=b: 
     x=i
     fx=eval(f)
@@ -122,20 +123,21 @@ ll.append(b)
 #Absolute Max/Min
 multabs=[]
 print(lmin)
+am = lmin[0]
 for y in lmin: 
     pos=lmin.index(y)
     if len(lmin)==0:
         print("Absolute minimum: ", y)
-    elif y==lmin[0]: 
-        am=y
     if round(y,3) != b: 
         x=y
         fx=eval(f) 
+        print(fx)
         x=lmin[pos+1]
         fx2=eval(f)
+        print(fx2)
         if fx<fx2:
             am=fx
-        elif fx2<fx: 
+        elif fx2>fx: 
             am=fx2
         elif fx<(fx2+.01) and fx>(fx2-.01): 
             multabs.append(fx)
@@ -152,7 +154,7 @@ print("lmax", lmax)
 print("multabs", multabs)
 for h in multabs: 
     print("Absolute minimum = {0}".format(round(h, 4)))
-    
+
 #Points of Inflection
 i=a
 while i<=b: 
