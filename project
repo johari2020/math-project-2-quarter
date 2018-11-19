@@ -91,7 +91,7 @@ while i <= b+0.5:
 #Critical Points(fprime=0)
 i=a
 
-while i<=b: 
+while i<=b+0.01: 
     x=i
     fx=eval(f)
     x=i+.01
@@ -155,6 +155,7 @@ print("multabs", multabs)
 for h in multabs: 
     print("Absolute minimum = {0}".format(round(h, 4)))
 
+    
 #Points of Inflection
 i=a
 while i<=b: 
