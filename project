@@ -126,7 +126,7 @@ print("lmax", lmax)
 am = lmin[0]
 for y in lmin: 
     pos=lmin.index(y)
-    if len(lmin)==0:
+    if len(lmin)==1:
         print("Absolute minimum: ", y)
     if y != lmin[len(lmin)-1]: 
         x=y
@@ -140,11 +140,12 @@ for y in lmin:
         elif fx2>fx: 
             am=fx2
         elif (fx<(fx2+.05) and fx>(fx2-.05)) or (fx2<(fx+.05) and fx2>(fx-.05)): 
-            multabs.append(fx)
-            multabs.append(fx2)
+            multabs.append(y)
+            multabs.append(lmin[pos+1])
             print("hi")
         else:
             print('sorry')
+            
 print("multabs", multabs)
 for h in multabs: 
     print("Absolute minimum = {0}".format(round(h, 4)))
