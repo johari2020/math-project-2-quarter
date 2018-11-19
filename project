@@ -118,11 +118,11 @@ while i<=b+0.01:
         lmin.append(x)
     i +=.01
 print(endpt)
-ll.append(b)
 
 #Absolute Max/Min
 multabs=[]
-print(lmin)
+print("lmin", lmin)
+print("lmax", lmax)
 am = lmin[0]
 for y in lmin: 
     pos=lmin.index(y)
@@ -139,18 +139,12 @@ for y in lmin:
             am=fx
         elif fx2>fx: 
             am=fx2
-        elif fx<(fx2+.01) and fx>(fx2-.01): 
+        elif fx<(fx2+.01) and fx>(fx2-.01) or fx2<(fx+.01) and fx2>(fx-.01): 
             multabs.append(fx)
             multabs.append(fx2)
             print("hi")
-        elif fx2<(fx+.01) and fx2>(fx-.01): 
-            multabs.append(fx)
-            multabs.append(fx2)
-            print("hello")
         else:
             print('sorry')
-print("Absolute minimum = {0}".format(round(am, 4)))
-print("lmax", lmax)
 print("multabs", multabs)
 for h in multabs: 
     print("Absolute minimum = {0}".format(round(h, 4)))
