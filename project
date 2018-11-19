@@ -128,7 +128,7 @@ for y in lmin:
     pos=lmin.index(y)
     if len(lmin)==0:
         print("Absolute minimum: ", y)
-    if round(y,3) != b: 
+    if y != lmin[len(lmin)-1]: 
         x=y
         fx=eval(f) 
         print(fx)
@@ -139,7 +139,7 @@ for y in lmin:
             am=fx
         elif fx2>fx: 
             am=fx2
-        elif fx<(fx2+.01) and fx>(fx2-.01) or fx2<(fx+.01) and fx2>(fx-.01): 
+        elif (fx<(fx2+.05) and fx>(fx2-.05)) or (fx2<(fx+.05) and fx2>(fx-.05)): 
             multabs.append(fx)
             multabs.append(fx2)
             print("hi")
